@@ -24,32 +24,35 @@ class Car {
 		};
 	}
 }
+module.exports = Car;
 
-// Exercício 2. Crie uma lista com 2 ou mais automovei
-const car1 = new Car("Fiat Uno 2021", "Fiat", "1.0 attractive", "Itália");
-const car2 = new Car("Sedã", "BMW", "BMW Série 3 Sedã", "França");
+function main() {
+	// Exercício 2. Crie uma lista com 2 ou mais automovei
+	const car1 = new Car("Fiat Uno 2021", "Fiat", "1.0 attractive", "Itália");
+	const car2 = new Car("Sedã", "BMW", "BMW Série 3 Sedã", "França");
 
-let cars = [car1, car2];
+	let cars = [car1, car2];
 
-// Exercício 3. Utilize FOR ou FOR OF e imprima a cada execução o nome e marca do automóvel
-for (let car of cars) {
-	console.log(`Carro: ${car.name}, marca: ${car.brand}`);
+	// Exercício 3. Utilize FOR ou FOR OF e imprima a cada execução o nome e marca do automóvel
+	for (let car of cars) {
+		console.log(`Carro: ${car.name}, marca: ${car.brand}`);
 
-	// Exercício 4. Dentro do FOR ou FOR OF ( Item 3 ) faça um FOR IN e imprima também todas as keys "chaves" do objeto de automóvel.
-	for (let key in car) {
-		console.log(`Chave: ${key}`);
+		// Exercício 4. Dentro do FOR ou FOR OF ( Item 3 ) faça um FOR IN e imprima também todas as keys "chaves" do objeto de automóvel.
+		for (let key in car) {
+			console.log(`Chave: ${key}`);
+		}
 	}
+
+	// Parte 2
+	// Exercício 1. Crie um objeto de automovel (com os mesmos atributos de 1.1)
+	let car3 = new Car("Citroën AMI", "Citroën", "AMI 8", "França");
+	console.log(car3);
+
+	// Exercício 2. Logo após sua criação, adicione um atributo de nome "cor" e atribua-lhe algum valor
+	car3.color = "green";
+	console.log(car3);
+
+	// Exercício 4. Remova o atributo paisOrigem do objeto
+	delete car3.originCountry;
+	console.log(car3);
 }
-
-// Parte 2
-// Exercício 1. Crie um objeto de automovel (com os mesmos atributos de 1.1)
-let car3 = new Car("Citroën AMI", "Citroën", "AMI 8", "França");
-console.log(car3);
-
-// Exercício 2. Logo após sua criação, adicione um atributo de nome "cor" e atribua-lhe algum valor
-car3.color = "green";
-console.log(car3);
-
-// Exercício 4. Remova o atributo paisOrigem do objeto
-delete car3.originCountry;
-console.log(car3);
