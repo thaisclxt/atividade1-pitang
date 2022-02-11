@@ -16,7 +16,7 @@ familyAge.mother = 51;
 console.log(familyAge);
 
 // Exercício 5. Crie uma lista numérica de 1 a 10
-let numberList = [...Array(17).keys()];
+let numberList = [...Array(11).keys()];
 numberList.shift();
 console.log(numberList);
 
