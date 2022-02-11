@@ -20,6 +20,18 @@ let numberList = [...Array(11).keys()];
 numberList.shift();
 console.log(numberList);
 
+/**
+ * @description Another way to print "numberList" using callback function
+ * @param {Array<Number>} values
+ * @param {function} callback
+ */
+function printNumberList(values, callback) {
+	for (let value of values) {
+		callback(value);
+	}
+}
+printNumberList(numberList, (value) => console.log(value));
+
 // Exercício 6. Crie um objeto (dicionário) com dados de um aluno (dados aleatórios/fictícios)
 let student = { name: "André", age: 12, grade: 10 };
 console.log(student);
